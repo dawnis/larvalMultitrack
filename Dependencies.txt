@@ -1,0 +1,36 @@
+*** binary dependencies ***
+Your executable(s) also depend on these dlls which are not included,
+you may or may not need to distribute them.
+
+Make sure you have the license if you distribute any of them, and
+make sure you don't distribute files belonging to the operating system.
+   
+   OLEAUT32.dll - C:\Windows\system32\OLEAUT32.dll
+   USER32.dll - C:\Windows\system32\USER32.dll
+   IMM32.dll - C:\Windows\system32\IMM32.dll
+   SHELL32.dll - C:\Windows\system32\SHELL32.dll
+   ole32.dll - C:\Windows\system32\ole32.dll
+   COMDLG32.dll - C:\Windows\system32\COMDLG32.dll
+   WINMM.dll - C:\Windows\system32\WINMM.dll
+   ntdll.dll - C:\Windows\system32\ntdll.dll
+   COMCTL32.dll - C:\Windows\system32\COMCTL32.dll
+   ADVAPI32.dll - C:\Windows\system32\ADVAPI32.dll
+   * ck_lite.pyd - C:\Python27\lib\site-packages\numpy-1.7.1-py2.7-win32.egg\numpy\fft\fftpack_lite.pyd
+   * msvcrt.dll - C:\Windows\system32\msvcrt.dll
+   WS2_32.dll - C:\Windows\system32\WS2_32.dll
+   WINSPOOL.DRV - C:\Windows\system32\WINSPOOL.DRV
+   GDI32.dll - C:\Windows\system32\GDI32.dll
+   * gdiplus.dll - C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\gdiplus.dll
+   VERSION.dll - C:\Windows\system32\VERSION.dll
+   KERNEL32.dll - C:\Windows\system32\KERNEL32.dll
+   WSOCK32.dll - C:\Windows\system32\WSOCK32.dll
+   * MSVCP90.dll - C:\Program Files (x86)\CMake 2.8\bin\MSVCP90.dll
+   RPCRT4.dll - C:\Windows\system32\RPCRT4.dll
+
+
+* were copied manually from DC's laptop
+
+also
+
+opencv_ffmpeg.dll
+opencv_ffmpeg_64.dll

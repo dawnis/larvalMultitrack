@@ -1,0 +1,303 @@
+Tue Aug 27 17:31:03 2013    larvalMultitrack.profile
+
+         1487386 function calls (1487370 primitive calls) in 108.905 seconds
+
+   Random listing order was used
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+    12502    0.023    0.000    0.023    0.000 {time.time}
+      395    0.001    0.000    0.001    0.000 {cv2.cv.RGB}
+        3    0.000    0.000    0.000    0.000 {wx._gdi_.StockGDI_GetCursor}
+        9    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\scipy\io\matlab\miobase.py:224(matdims)
+        1    0.004    0.004    0.004    0.004 {open}
+        4    0.000    0.000    0.003    0.001 c:\Users\Cornell\Dropbox\Python\larvalMultitrack\wxGUI_Classes.py:325(__init__)
+        1    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_gdi.py:6582(<lambda>)
+    29990    0.565    0.000    1.393    0.000 C:\Python27\lib\site-packages\numpy-1.7.1-py2.7-win32.egg\numpy\core\_methods.py:42(_mean)
+        7    0.000    0.000    0.004    0.001 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_controls.py:337(__init__)
+    29990    0.085    0.000    1.478    0.000 C:\Python27\lib\site-packages\numpy-1.7.1-py2.7-win32.egg\numpy\core\fromnumeric.py:2405(mean)
+        4    0.003    0.001    0.003    0.001 {wx._controls_.new_Button}
+        1    0.000    0.000  108.845  108.845 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_core.py:7299(MainLoop)
+       24    0.000    0.000    0.000    0.000 {wx._core_.EvtHandler_Connect}
+     1250    0.097    0.000    0.544    0.000 c:\Users\Cornell\Dropbox\Python\larvalMultitrack\lm_functions.py:38(BGUpdateFnc)
+        2    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_core.py:4015(__call__)
+    37640    0.012    0.000    0.012    0.000 {method 'itervalues' of 'dict' objects}
+        2    0.000    0.000    0.010    0.005 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_controls.py:581(__init__)
+      192    0.004    0.000    0.144    0.001 c:\Users\Cornell\Dropbox\Python\larvalMultitrack\wxGUI_Classes.py:235(update_processRate)
+        1    0.000    0.000    0.059    0.059 c:\Users\Cornell\Dropbox\Python\larvalMultitrack\wxGUI_Classes.py:12(__init__)
+        1    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\scipy\io\matlab\mio5.py:479(__init__)
+        2    0.000    0.000    0.000    0.000 {wx._controls_.CheckBox_SetValue}
+      149    0.201    0.001    0.248    0.002 c:\Users\Cornell\Dropbox\Python\larvalMultitrack\lm_functions.py:55(draw_tObjs)
+        2    0.387    0.194    0.387    0.194 {cv2.VideoCapture}
+        6    0.000    0.000    0.000    0.000 {wx._controls_.StaticText_swiginit}
+        1    0.000    0.000    0.000    0.000 {time.asctime}
+        7    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_gdi.py:6350(GetColour)
+       18    0.000    0.000    1.320    0.073 C:\Python27\lib\site-packages\scipy\io\matlab\mio5.py:512(write_regular_element)
+        2    0.000    0.000    0.000    0.000 c:\Users\Cornell\Dropbox\Python\larvalMultitrack\wxGUI_Classes.py:437(SetImg_Globals)
+       74    0.006    0.000    1.320    0.018 C:\Python27\lib\site-packages\scipy\io\matlab\mio5.py:488(write_bytes)
+        1    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_windows.py:2502(GetDirectory)
+   220584    2.467    0.000    2.467    0.000 {method 'reduce' of 'numpy.ufunc' objects}
+        7    0.000    0.000    0.000    0.000 {wx._misc_.Timer_Stop}
+        1    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_core.py:8453(Close)
+       11    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\scipy\io\matlab\mio5.py:504(write_smalldata_element)
+        2    0.000    0.000    0.000    0.000 {method 'astype' of 'numpy.ndarray' objects}
+        4    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_gdi.py:2083(<lambda>)
+        1    0.000    0.000    0.000    0.000 C:\Python27\lib\ntpath.py:189(splitext)
+        2    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_core.py:8561(GetId)
+        1    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_core.py:7182(_setCallbackInfo)
+        1    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_core.py:9763(Refresh)
+        1    0.000    0.000    0.000    0.000 {wx._core_.PyApp__setCallbackInfo}
+        3    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_gdi.py:6493(<lambda>)
+      2/1    0.000    0.000    0.002    0.002 C:\Python27\lib\site-packages\scipy\io\matlab\mio5.py:726(_write_items)
+        2    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\numpy-1.7.1-py2.7-win32.egg\numpy\core\shape_base.py:58(atleast_2d)
+        2    0.000    0.000    0.000    0.000 {wx._misc_.Timer_Start}
+        4    0.000    0.000    0.000    0.000 {wx._core_.CommandEvent_IsChecked}
+        2    0.000    0.000    0.009    0.005 c:\Users\Cornell\Dropbox\Python\larvalMultitrack\wxGUI_Classes.py:327(<lambda>)
+        1    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_misc.py:6066(Get)
+        2    0.000    0.000    0.000    0.000 {wx._misc_.Timer__setCallbackInfo}
+        1    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_gdi.py:6369(_initStockObjects)
+        1    0.000    0.000    0.005    0.005 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_core.py:13078(Fit)
+        1    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_misc.py:225(SetOptionInt)
+        1    0.001    0.001    0.001    0.001 {wx._windows_.Frame_SetMenuBar}
+        1    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_core.py:7984(OnPreInit)
+        1    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_gdi.py:6605(_wxPyInitTheFontList)
+     6252    0.020    0.000    0.020    0.000 {method 'set' of 'cv2.VideoCapture' objects}
+       24    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_core.py:3873(Connect)
+        9    0.000    0.000    0.001    0.000 C:\Python27\lib\site-packages\scipy\io\matlab\mio5.py:524(write_header)
+       18    0.000    0.000    0.000    0.000 {method 'split' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 {wx._windows_.FileDialog_GetDirectory}
+        4    0.000    0.000    0.000    0.000 {wx._controls_.Button_swiginit}
+        1    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_windows.py:2510(GetFilename)
+        4    0.000    0.000    0.000    0.000 {wx._core_.Menu_Append}
+      192    0.001    0.000    0.136    0.001 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_core.py:8497(SetLabel)
+    29990    0.101    0.000    0.145    0.000 C:\Python27\lib\site-packages\numpy-1.7.1-py2.7-win32.egg\numpy\core\_methods.py:32(_count_reduce_items)
+       11    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_core.py:12685(<lambda>)
+       37    0.000    0.000    0.000    0.000 {wx._core_.Sizer_Add}
+        8    0.000    0.000    0.002    0.000 c:\Users\Cornell\Dropbox\Python\larvalMultitrack\lMulti_IO.py:11(write)
+      395    0.011    0.000    0.018    0.000 c:\Users\Cornell\Dropbox\Python\larvalMultitrack\lm_functions.py:164(__init__)
+        6    0.000    0.000    0.003    0.001 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_controls.py:1130(__init__)
+        1    0.272    0.272    0.272    0.272 {method 'close' of 'file' objects}
+        2    0.000    0.000    0.000    0.000 {method 'clear' of 'dict' objects}
+      435    0.014    0.000    0.014    0.000 {numpy.core.multiarray.zeros}
+     6242    0.076    0.000    0.551    0.000 C:\Python27\lib\site-packages\numpy-1.7.1-py2.7-win32.egg\numpy\core\fromnumeric.py:1847(amax)
+        1    0.000    0.000  108.845  108.845 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_core.py:8008(MainLoop)
+        7    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_misc.py:1317(Stop)
+        1    0.000    0.000    0.000    0.000 {wx._core_.Window_Refresh}
+     6252   22.531    0.004   22.531    0.004 {method 'read' of 'cv2.VideoCapture' objects}
+        1    0.000    0.000    0.000    0.000 {wx._gdi_._wxPyInitThePenList}
+        1    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_core.py:7171(__init__)
+    43461    0.084    0.000    0.084    0.000 {method 'keys' of 'dict' objects}
+        1    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_windows.py:62(__init__)
+        9    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\numpy-1.7.1-py2.7-win32.egg\numpy\core\numeric.py:252(asarray)
+       10    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_gdi.py:6345(GetBrush)
+        1    1.943    1.943    1.943    1.943 {wx._windows_.Dialog_ShowModal}
+        4    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_gdi.py:6340(instance)
+        8    0.000    0.000    0.002    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_controls.py:1844(WriteText)
+        3    0.000    0.000    0.000    0.000 {method 'rfind' of 'unicode' objects}
+        9    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\scipy\io\matlab\mio5.py:567(update_matrix_tag)
+        1    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_core.py:10536(SetAutoLayout)
+        3    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_gdi.py:6355(GetCursor)
+        4    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_core.py:11056(Append)
+        1    0.000    0.000    1.322    1.322 C:\Python27\lib\site-packages\scipy\io\matlab\mio5.py:804(put_variables)
+       10    0.000    0.000    0.000    0.000 {wx._gdi_.StockGDI_GetPen}
+        4    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_core.py:11492(<lambda>)
+        1    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_core.py:11051(__init__)
+        1    0.000    0.000    0.001    0.001 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_core.py:9165(Disable)
+        2    0.000    0.000    1.322    0.661 C:\Python27\lib\site-packages\scipy\io\matlab\mio5.py:574(write_top)
+        2    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_misc.py:1294(__init__)
+     6250    4.978    0.001    4.978    0.001 {cv2.medianBlur}
+        1    0.000    0.000    0.000    0.000 {wx._gdi_._wxPyInitTheBrushList}
+     6250    1.600    0.000    1.600    0.000 {cv2.dilate}
+   244398    0.219    0.000    0.219    0.000 {isinstance}
+       11    0.000    0.000    0.000    0.000 {wx._core_.Sizer__setOORInfo}
+        3    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_gdi.py:1393(<lambda>)
+        2    0.000    0.000    0.010    0.005 c:\Users\Cornell\Dropbox\Python\larvalMultitrack\wxGUI_Classes.py:351(__init__)
+    45077    0.111    0.000    0.111    0.000 {cv2.contourArea}
+        4    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_gdi.py:6334(<lambda>)
+        1    0.006    0.006    1.713    1.713 c:\Users\Cornell\Dropbox\Python\larvalMultitrack\wxGUI_Classes.py:202(stopTracking)
+    12500    0.022    0.000    0.057    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_controls.py:360(GetValue)
+      192    0.133    0.001    0.135    0.001 {wx._core_.Window_SetLabel}
+        3    0.000    0.000    0.000    0.000 {max}
+        1    0.026    0.026    0.244    0.244 c:\Users\Cornell\Dropbox\Python\larvalMultitrack\wxGUI_Classes.py:179(onTrack)
+        1    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_core.py:11313(__init__)
+        1    0.000    0.000    0.000    0.000 {wx._windows_.new_Panel}
+        2    0.000    0.000    0.000    0.000 {wx._core_.Window_GetId}
+        1    0.000    0.000    0.000    0.000 {wx._core_.PyApp__BootstrapApp}
+        1    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_windows.py:2420(__init__)
+        1    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_gdi.py:6613(_wxPyInitTheBrushList)
+     6250    0.184    0.000   10.331    0.002 c:\Users\Cornell\Dropbox\Python\larvalMultitrack\lm_functions.py:18(CalculateBGDiff)
+       10    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_core.py:13271(<lambda>)
+        1    0.000    0.000    0.000    0.000 c:\Users\Cornell\Dropbox\Python\larvalMultitrack\wxGUI_Classes.py:414(__init__)
+        9    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\scipy\sparse\base.py:553(isspmatrix)
+        1    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_core.py:7445(SetUseBestVisual)
+        1    0.000    0.000    0.000    0.000 {wx._core_.new_PyApp}
+        1    0.000    0.000    0.000    0.000 {wx._misc_.SystemOptions_SetOptionInt}
+       11    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_core.py:13273(__init__)
+       86    0.314    0.004    0.314    0.004 {method 'tostring' of 'numpy.ndarray' objects}
+        2    0.000    0.000    0.011    0.006 c:\Users\Cornell\Dropbox\Python\larvalMultitrack\wxGUI_Classes.py:340(make_trckCB)
+       10    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_gdi.py:456(<lambda>)
+        1    0.000    0.000    0.000    0.000 {wx._core_.Window_Destroy}
+        1    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_core.py:11318(Append)
+     6252    0.044    0.000   22.575    0.004 c:\Users\Cornell\Dropbox\Python\larvalMultitrack\videoControl_functions.py:28(GetGSFrame)
+    29998    0.053    0.000    0.115    0.000 C:\Python27\lib\site-packages\numpy-1.7.1-py2.7-win32.egg\numpy\core\numeric.py:322(asanyarray)
+    29595    0.013    0.000    0.013    0.000 c:\Users\Cornell\Dropbox\Python\larvalMultitrack\lm_functions.py:117(<lambda>)
+        1    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_core.py:7549(_BootstrapApp)
+        1    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_controls.py:1729(__init__)
+        9    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\scipy\io\matlab\mio5.py:379(to_writeable)
+        4    0.000    0.000    0.000    0.000 {wx._core_.MenuItem_GetId}
+        1    0.000    0.000    0.000    0.000 {wx._windows_.FileDialog_GetFilename}
+       18    0.000    0.000    0.000    0.000 {method 'seek' of 'file' objects}
+        1    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_core.py:814(<lambda>)
+     6250    1.013    0.000    7.400    0.001 c:\Users\Cornell\Dropbox\Python\larvalMultitrack\lm_functions.py:98(DetectObjects)
+        8    0.001    0.000    0.002    0.000 {wx._controls_.TextCtrl_WriteText}
+        1    0.000    0.000    0.000    0.000 {wx._core_.Window_SetSizer}
+        1    0.000    0.000    0.000    0.000 {wx._gdi_._wxPyInitTheFontList}
+       22    0.000    0.000    0.000    0.000 {callable}
+        1    0.000    0.000    0.000    0.000 {wx._core_.new_MenuBar}
+        1    0.107    0.107    1.706    1.706 c:\Users\Cornell\Dropbox\Python\larvalMultitrack\lMulti_IO.py:20(writeMatlab)
+        1    0.019    0.019    0.019    0.019 {wx._core_.Window_Show}
+        2    0.000    0.000    0.009    0.005 c:\Users\Cornell\Dropbox\Python\larvalMultitrack\wxGUI_Classes.py:329(EvtCheckBox)
+    43641    0.704    0.000    0.704    0.000 {numpy.core.multiarray.array}
+        5    0.000    0.000    0.009    0.002 c:\Users\Cornell\Dropbox\Python\larvalMultitrack\wxGUI_Classes.py:401(__init__)
+        5    0.009    0.002    0.009    0.002 {wx._controls_.new_Slider}
+        1    0.000    0.000    0.000    0.000 c:\Users\Cornell\Dropbox\Python\larvalMultitrack\lMulti_IO.py:8(__init__)
+        1    0.000    0.000    1.943    1.943 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_windows.py:709(ShowModal)
+        1    0.006    0.006    0.006    0.006 {cv2.namedWindow}
+        1    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_gdi.py:6609(_wxPyInitThePenList)
+   184352    0.440    0.000    2.339    0.000 C:\Python27\lib\site-packages\numpy-1.7.1-py2.7-win32.egg\numpy\core\fromnumeric.py:1422(sum)
+        3    0.000    0.000    0.001    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_core.py:9153(Enable)
+        4    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_gdi.py:6365(GetFont)
+       22    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_core.py:3890(Bind)
+      241    0.002    0.000    0.002    0.000 {_codecs.charmap_decode}
+       10    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_gdi.py:343(<lambda>)
+    29990    0.120    0.000    0.120    0.000 {cv2.boundingRect}
+     6250    0.010    0.000    0.010    0.000 {method 'copy' of 'dict' objects}
+       24    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_core.py:3992(Bind)
+      241    0.001    0.000    0.002    0.000 C:\Python27\lib\encodings\cp1252.py:14(decode)
+      792    0.002    0.000    0.002    0.000 {method 'update' of 'dict' objects}
+        2    0.000    0.000    0.000    0.000 {wx._misc_.Timer_swiginit}
+        1    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_core.py:10570(SetSizer)
+       11    0.000    0.000    0.000    0.000 {wx._core_.new_BoxSizer}
+       22    0.000    0.000    0.000    0.000 {hasattr}
+        1    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_core.py:8014(RedirectStdio)
+        1    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_core.py:8464(Destroy)
+        4    0.000    0.000    0.000    0.000 {wx._gdi_.StockGDI_instance}
+        4    0.000    0.000    0.000    0.000 {method 'own' of 'PySwigObject' objects}
+        1    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_core.py:7789(__init__)
+        1    0.000    0.000    0.000    0.000 {wx._misc_.StandardPaths_Get}
+       11    0.000    0.000    0.000    0.000 {wx._core_.BoxSizer_swiginit}
+        7    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_gdi.py:129(<lambda>)
+        1    0.001    0.001    0.001    0.001 {wx._windows_.new_Frame}
+        1    0.000    0.000    0.000    0.000 {wx._core_.MenuBar_swiginit}
+        3    0.000    0.000    0.000    0.000 {method 'items' of 'dict' objects}
+    18934    0.011    0.000    0.011    0.000 {method 'append' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 {wx._windows_.Panel_swiginit}
+        1    0.000    0.000    0.000    0.000 c:\Users\Cornell\Dropbox\Python\larvalMultitrack\wxGUI_Classes.py:421(<dictcomp>)
+        4    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_core.py:11506(GetId)
+        1    0.000    0.000  108.905  108.905 larvalMultitrack_main.py:1(<module>)
+        1    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\scipy\io\matlab\mio5.py:758(__init__)
+     6253    0.007    0.000    0.007    0.000 {method 'get' of 'cv2.VideoCapture' objects}
+   184352    0.285    0.000    1.729    0.000 C:\Python27\lib\site-packages\numpy-1.7.1-py2.7-win32.egg\numpy\core\_methods.py:16(_sum)
+        2    0.000    0.000    0.000    0.000 {wx._misc_.new_Timer}
+        1    0.000    0.000    0.019    0.019 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_core.py:9133(Show)
+    12500    0.036    0.000    0.036    0.000 {wx._controls_.CheckBox_GetValue}
+       10    0.000    0.000    0.000    0.000 {wx._gdi_.StockGDI_GetBrush}
+        1    0.000    0.000    0.000    0.000 c:\Users\Cornell\Dropbox\Python\larvalMultitrack\wxGUI_Classes.py:240(OnExit)
+        5    0.000    0.000    0.000    0.000 {method 'has_key' of 'dict' objects}
+       10    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_gdi.py:6360(GetPen)
+        1    0.000    0.000    0.000    0.000 {signal.signal}
+     6242    0.016    0.000    0.476    0.000 C:\Python27\lib\site-packages\numpy-1.7.1-py2.7-win32.egg\numpy\core\_methods.py:8(_amax)
+        2    0.000    0.000    0.001    0.000 c:\Users\Cornell\Dropbox\Python\larvalMultitrack\wxGUI_Classes.py:364(__init__)
+        1    0.000    0.000    0.000    0.000 {wx._core_.Window_Close}
+     6250    4.326    0.001    7.297    0.001 c:\Users\Cornell\Dropbox\Python\larvalMultitrack\lm_functions.py:114(TrackObjects)
+        1    0.000    0.000    0.000    0.000 {wx._core_.MenuBar_Append}
+        1    0.000    0.000    0.000    0.000 {wx._core_.Menu_swiginit}
+        4    0.000    0.000    0.000    0.000 {wx._gdi_.StockGDI_GetFont}
+       22    0.000    0.000    1.320    0.060 C:\Python27\lib\site-packages\scipy\io\matlab\mio5.py:494(write_element)
+        1    0.000    0.000    0.000    0.000 {wx._controls_.new_TextCtrl}
+        1    0.000    0.000    0.000    0.000 C:\Python27\lib\genericpath.py:85(_splitext)
+      2/1    0.000    0.000    0.003    0.003 C:\Python27\lib\site-packages\scipy\io\matlab\mio5.py:721(write_struct)
+        1    0.000    0.000    0.000    0.000 {wx._misc_.StandardPaths_SetInstallPrefix}
+        1    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_misc.py:6207(SetInstallPrefix)
+     6250    0.073    0.000   16.819    0.003 c:\Users\Cornell\Dropbox\Python\larvalMultitrack\lm_functions.py:83(updateTracking)
+        1    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_core.py:8023(RestoreStdio)
+      9/2    0.000    0.000    1.322    0.661 C:\Python27\lib\site-packages\scipy\io\matlab\mio5.py:594(write)
+        7    0.000    0.000    0.000    0.000 {wx._controls_.CheckBox_swiginit}
+        2    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_core.py:12904(AddSpacer)
+        1    0.000    0.000    0.000    0.000 {wx._core_.PyApp_swiginit}
+     1250    0.004    0.000    0.004    0.000 {method 'normal' of 'mtrand.RandomState' objects}
+     6250    1.948    0.000    2.019    0.000 c:\Users\Cornell\Dropbox\Python\larvalMultitrack\lm_functions.py:90(updateTrackData)
+        1    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_core.py:7567(IsDisplayAvailable)
+       28    0.000    0.000    0.000    0.000 {method 'tell' of 'file' objects}
+        1    0.000    0.000    0.001    0.001 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_windows.py:520(SetMenuBar)
+      149    0.047    0.000    0.047    0.000 {cv2.imshow}
+        4    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_core.py:4593(IsChecked)
+     6250    0.805    0.000    0.805    0.000 {cv2.threshold}
+        1    0.005    0.005    0.005    0.005 {wx._core_.Sizer_Fit}
+        5    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_controls.py:2729(SetTickFreq)
+      395    0.003    0.000    0.003    0.000 {method 'round' of 'numpy.ndarray' objects}
+       37    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_core.py:12326(<lambda>)
+        4    0.000    0.000    0.003    0.001 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_controls.py:73(__init__)
+        1    0.000    0.000    0.000    0.000 {wx._windows_.new_FileDialog}
+        1    0.000    0.000    0.000    0.000 {wx._controls_.TextCtrl_swiginit}
+    12529    0.006    0.000    0.006    0.000 {len}
+     6250    0.019    0.000    0.019    0.000 {method 'copy' of 'numpy.ndarray' objects}
+      926    0.004    0.000    0.004    0.000 {cv2.circle}
+        1    0.000    0.000    0.000    0.000 {wx._gdi_._wxPyInitTheColourDatabase}
+        5    0.000    0.000    0.000    0.000 {wx._controls_.Slider_SetTickFreq}
+        1    0.000    0.000    2.196    2.196 c:\Users\Cornell\Dropbox\Python\larvalMultitrack\wxGUI_Classes.py:258(OnOpen)
+     6250    4.090    0.001    4.090    0.001 {cv2.findContours}
+    12500    0.104    0.000    0.104    0.000 {cv2.getStructuringElement}
+        3    0.001    0.000    0.001    0.000 {wx._core_.Window_Enable}
+       33    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_core.py:3884(_setOORInfo)
+      149    0.000    0.000    0.000    0.000 {range}
+        1    0.000    0.000    0.001    0.001 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_windows.py:499(__init__)
+     1852    0.014    0.000    0.014    0.000 {cv2.putText}
+        1    0.000    0.000    0.000    0.000 {wx._windows_.Frame_swiginit}
+      395    0.003    0.000    0.003    0.000 {method 'rand' of 'mtrand.RandomState' objects}
+        1    0.000    0.000    0.000    0.000 {wx._windows_.FileDialog_swiginit}
+        2    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_misc.py:1313(Start)
+        2    0.000    0.000    0.000    0.000 {method 'flatten' of 'numpy.ndarray' objects}
+        3    0.000    0.000    0.002    0.001 c:\Users\Cornell\Dropbox\Python\larvalMultitrack\wxGUI_Classes.py:377(__init__)
+        1    0.000    0.000    0.000    0.000 {wx._core_.PyApp_IsDisplayAvailable}
+     6250    1.814    0.000    1.814    0.000 {cv2.erode}
+     6448    0.003    0.000    0.003    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_core.py:4372(<lambda>)
+        1    0.000    0.000    0.000    0.000 {wx._core_.new_Menu}
+       79    0.999    0.013    0.999    0.013 {method 'write' of 'file' objects}
+        1    0.000    0.000    0.001    0.001 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_core.py:7900(__init__)
+     6402    0.050    0.000    0.050    0.000 {numpy.core.multiarray.empty}
+      794    0.017    0.000    0.017    0.000 {cv2.drawContours}
+        7    0.000    0.000    0.000    0.000 {wx._gdi_.StockGDI_GetColour}
+      9/2    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\numpy-1.7.1-py2.7-win32.egg\numpy\core\_internal.py:82(_array_descr)
+        2    0.010    0.005    0.010    0.005 {wx._controls_.new_ComboBox}
+        1   53.136   53.136  108.845  108.845 {wx._core_.PyApp_MainLoop}
+       33    0.000    0.000    0.000    0.000 {wx._core_.EvtHandler__setOORInfo}
+        1    0.000    0.000    0.000    0.000 {wx._core_.Window_SetAutoLayout}
+     6250    0.847    0.000    0.847    0.000 {cv2.subtract}
+        2    0.070    0.035    0.070    0.035 {gc.collect}
+        2    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_misc.py:1301(_setCallbackInfo)
+      395    0.001    0.000    0.003    0.000 C:\Python27\lib\site-packages\numpy-1.7.1-py2.7-win32.egg\numpy\core\fromnumeric.py:2387(round_)
+        1    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_gdi.py:6617(_wxPyInitTheColourDatabase)
+        5    0.000    0.000    0.012    0.002 c:\Users\Cornell\Dropbox\Python\larvalMultitrack\wxGUI_Classes.py:390(makeGl_Slider)
+     6251    0.619    0.000   53.114    0.008 c:\Users\Cornell\Dropbox\Python\larvalMultitrack\wxGUI_Classes.py:143(onNextFrame)
+        1    0.000    0.000    0.000    0.000 {wx._core_.PyApp_SetUseBestVisual}
+        9    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\scipy\sparse\sputils.py:116(_isinstance)
+        7    0.004    0.001    0.004    0.001 {wx._controls_.new_CheckBox}
+    59190    0.022    0.000    0.022    0.000 c:\Users\Cornell\Dropbox\Python\larvalMultitrack\lm_functions.py:116(<lambda>)
+        1    0.000    0.000    1.598    1.598 C:\Python27\lib\site-packages\scipy\io\matlab\mio.py:184(savemat)
+       37    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_core.py:12690(Add)
+        2    0.000    0.000    0.000    0.000 {wx._controls_.ComboBox_swiginit}
+        1    0.001    0.001    0.001    0.001 {wx._core_.Window_Disable}
+        5    0.000    0.000    0.009    0.002 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_controls.py:2652(__init__)
+        1    0.003    0.003    0.003    0.003 {cv2.cv.DestroyWindow}
+        1    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\scipy\io\matlab\mio5.py:793(write_file_header)
+        5    0.000    0.000    0.000    0.000 {wx._controls_.Slider_swiginit}
+       11    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_core.py:12686(_setOORInfo)
+    12500    0.004    0.000    0.004    0.000 {method 'iteritems' of 'dict' objects}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        2    0.000    0.000    0.000    0.000 C:\Python27\lib\site-packages\wx-2.8-msw-unicode\wx\_controls.py:378(SetValue)
+     1250    0.443    0.000    0.443    0.000 {cv2.addWeighted}
+        1    0.000    0.000    0.000    0.000 {cv2.cv.DestroyAllWindows}
+        7    0.000    0.000    1.320    0.189 C:\Python27\lib\site-packages\scipy\io\matlab\mio5.py:632(write_numeric)
+        6    0.003    0.001    0.003    0.001 {wx._controls_.new_StaticText}
+
+
