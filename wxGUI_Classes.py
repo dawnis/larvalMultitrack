@@ -1,5 +1,5 @@
 import wx
-import cv2.cv as cv, cv2
+import cv2 as cv, cv2
 import os, sys, re, time, cPickle, gc
 from lm_functions import *
 from videoControl_functions import *
@@ -264,7 +264,7 @@ class vFrame(wx.Frame):
             self.seek_sld.SetValue(int(100.*GlProp.vidstream.get(cv.CV_CAP_PROP_POS_AVI_RATIO)))
 
     def OnExit(self,e):
-        cv.DestroyAllWindows()
+        cv.destroyAllWindows()
         GlProp.frametimer.Stop()
         self.Close(True)
 

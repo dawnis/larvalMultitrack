@@ -1,5 +1,5 @@
 """Functions associated with controlling video input"""
-import cv2.cv as cv, cv2
+import cv2 as cv, cv2
 
 
 #def setVideoCapture(GlProp,inputStream):

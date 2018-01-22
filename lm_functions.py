@@ -1,6 +1,6 @@
 """Functions Associated With Image Processing and Tracking"""
 import numpy as np
-import cv2.cv as cv, cv2
+import cv2 as cv, cv2
 from munkres import Munkres
 from scipy.spatial.distance import cdist
 

@@ -1,7 +1,7 @@
 """Functions associated with I/O"""
 import cPickle, traceback
 import numpy as np, scipy.io
-import cv2, cv2.cv as cv
+import cv2 as cv, cv2
     
 #log
 class RedirectText(object):
