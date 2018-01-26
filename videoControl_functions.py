@@ -33,6 +33,6 @@ def GetGSFrame(videostream):
     #s,frame=videostream.retrieve()
     if s:
         if (frame.ndim==3):
-            return s, cv2.cvtColor(frame,cv.CV_RGB2GRAY)
+            return s, cv2.cvtColor(frame,cv.COLOR_RGB2GRAY)
     return s, frame
         

@@ -31,7 +31,7 @@ def CalculateBGDiff(bgIMG,currFrame,trckThrsh,trckPara):
     diffImg = cv2.subtract(bgIMG,currFrame)
     diffImg = cv2.medianBlur(diffImg,ksize=3)
     #cv2.imshowp("output",diffImg)
-    (thresh,binIMG)=cv2.threshold(diffImg,trckThrsh,255,cv.CV_THRESH_BINARY)
+    (thresh,binIMG)=cv2.threshold(diffImg,trckThrsh,255,cv.THRESH_BINARY)
     #binIMG=cv2.adaptiveThreshold(diffImg,255,cv.CV_ADAPTIVE_THRESH_MEAN_C,cv.CV_THRESH_BINARY,5,0)
     #binIMG = cv2.medianBlur(binIMG,ksize=3)
     if trckPara["Erosion"]:
@@ -74,13 +74,13 @@ def draw_tObjs(liveframe,contours,currObjs,neighborDist):
                     #"P:%2.2f"%(tObj.fishProb),
                     "ID: %2.0f"%(tObj.objID),
                     tuple(tObj.xy+20),
-                    cv.CV_FONT_HERSHEY_PLAIN,
+                    cv.FONT_HERSHEY_PLAIN,
                     fontScale=1,
                     color=tObj.color)
         cv2.putText(trackImg,
                     "P:%2.2f"%(tObj.fishProb),
                     tuple(tObj.xy+np.array([20,35])),
-                    cv.CV_FONT_HERSHEY_PLAIN,
+                    cv.FONT_HERSHEY_PLAIN,
                     fontScale=1,
                     color=tObj.color)
     #cv2.imwrite("oFrame.png",liveframe)
@@ -98,15 +98,16 @@ def updateTrackData(currObjs,trackData,fIdx):
     """puts current xy coordinates into tracking record structure for each objID. If objID doesn't exist, initializes a new entry"""
     for objKy,obj in currObjs.iteritems():
         if objKy in trackData.keys():
-            trackData[objKy][fIdx,:] = obj.xy
+            trackData[objKy][int(fIdx),:] = obj.xy
         else:
             trackData.update({objKy:np.zeros((40000,2),dtype=float)+np.nan})#initialize with nan to signify empty spots
-            trackData[objKy][fIdx,:] = obj.xy #added 5/27/14 not tested
+            trackData[objKy][int(fIdx),:] = obj.xy #added 5/27/14 not tested
 
 def DetectObjects(binIMG,minSize):
     """finds the contours and returns those over minSize"""
     contourlist = np.empty((100,6),dtype=int) 
-    (contours,hierarchy)=cv2.findContours(np.array(binIMG),cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
+    #(contours,hierarchy)=cv2.findContours(np.array(binIMG),cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
+    _, contours, hierarchy =cv2.findContours(np.array(binIMG),cv2.RETR_TREE,cv2.CHAIN_APPROX_NONE)
     dCount = 0
     for n, cnt in enumerate(contours):
         cnt_size = cv2.contourArea(cnt)
@@ -240,7 +241,8 @@ class trackedObject():
         self.boundBx = boundBx
         #self.color = tuple((np.random.random((3))*255).astype("int"))
         R,G,B = tuple(np.round(np.random.rand(3)*255))
-        self.color = cv.RGB(R,G,B)
+        #self.color = cv.RGB(R,G,B)
+        self.color = (R,G,B)
         self.inFrame=True
         self.lostFrames = 0
         self.fishProb = 0 #probability of being a fish!

@@ -2,7 +2,7 @@ import wx
 import cv2 as cv, cv2
 import os, sys, re, time, cPickle, gc
 from lm_functions import *
-from videoControl_functions import *
+from videoControl_functions import GetGSFrame
 from lMulti_IO import *
 
 class vFrame(wx.Frame):
@@ -156,15 +156,15 @@ class vFrame(wx.Frame):
         frameImg=[]
         frameImg.append(cFrame[:,:,0])#0
         #print [tObj.kID for tObj in tObjList.itervalues()]
-        curr_frame_num_write = GlProp.vidstream.get(cv.CV_CAP_PROP_POS_FRAMES) 
+        curr_frame_num_write = GlProp.vidstream.get(cv.CAP_PROP_POS_FRAMES) 
         ret,frame=GetGSFrame(GlProp.vidstream) #read() method advances the frame index by 1
         frameImg.append(frame)#1
         if len(GlProp.vidfile)>0:
-            setpos=GlProp.vidstream.set(cv.CV_CAP_PROP_POS_FRAMES,GlProp.fIdx+GlProp.fDir)
-            GlProp.fIdx = GlProp.vidstream.get(cv.CV_CAP_PROP_POS_FRAMES)
+            setpos=GlProp.vidstream.set(cv.CAP_PROP_POS_FRAMES,GlProp.fIdx+GlProp.fDir)
+            GlProp.fIdx = GlProp.vidstream.get(cv.CAP_PROP_POS_FRAMES)
         else:
             setpos=True
-        if ret & setpos & (GlProp.fIdx+GlProp.fDir > -1) & (GlProp.fIdx+GlProp.fDir < GlProp.vidstream.get(cv.CV_CAP_PROP_FRAME_COUNT)):
+        if ret & setpos & (GlProp.fIdx+GlProp.fDir > -1) & (GlProp.fIdx+GlProp.fDir < GlProp.vidstream.get(cv.CAP_PROP_FRAME_COUNT)):
             dFrame=CalculateBGDiff(cFrame[:,:,0],frame,GlProp.trckThrsh,GlProp.TrckParameter)
             frameImg.append(dFrame)#2
             CurContours = updateTracking(curr_frame_num_write,dFrame,minSize=GlProp.szThrsh,minDist=GlProp.mDist,currObjs=tObjList,trackData=GlProp.trackData)
@@ -178,6 +178,7 @@ class vFrame(wx.Frame):
             for cvWindow in GlProp.cvCB:
                 if GlProp.cvCB[cvWindow]:
                     cv2.imshow(cvWindow,frameImg[GlProp.cvFrame[cvWindow]])
+                    cv2.waitKey(1)
         else:
             GlProp.frametimer.Stop()
             GlProp.processratetimer.Stop()
@@ -192,9 +193,9 @@ class vFrame(wx.Frame):
         """changes videostream to fractional location on slider bar"""
         vLoc = e.EventObject.GetValue()
         if len(GlProp.vidfile)>0:
-            GlProp.vidstream.set(cv.CV_CAP_PROP_POS_AVI_RATIO, vLoc/100.)
-            currFrame_pos = GlProp.vidstream.get(cv.CV_CAP_PROP_FRAME_COUNT)*vLoc/100.
-            GlProp.vidstream.set(cv.CV_CAP_PROP_POS_FRAMES, int(currFrame_pos))
+            GlProp.vidstream.set(cv.CAP_PROP_POS_AVI_RATIO, vLoc/100.)
+            currFrame_pos = GlProp.vidstream.get(cv.CAP_PROP_FRAME_COUNT)*vLoc/100.
+            GlProp.vidstream.set(cv.CAP_PROP_POS_FRAMES, int(currFrame_pos))
             GlProp.fIdx = int(currFrame_pos)
 
     def onTrack(self,e):
@@ -206,9 +207,9 @@ class vFrame(wx.Frame):
 #        for button in self.playctrlbuttons:
 #            button.Disable()
         GlProp.vidstream=cv2.VideoCapture(self.dirname+'\\'+GlProp.vidfile[GlProp.vidN])
-        setpos=GlProp.vidstream.set(cv.CV_CAP_PROP_POS_FRAMES,0) #rewind vid to beginning for analysis
+        setpos=GlProp.vidstream.set(cv2.CAP_PROP_POS_FRAMES,0) #rewind vid to beginning for analysis
         #logfile = self.dirname +"\\"+re.split('\.', GlProp.vidfile[vidN])[0]+".pickle"
-        GlProp.fIdx = GlProp.vidstream.get(cv.CV_CAP_PROP_POS_FRAMES)
+        GlProp.fIdx = GlProp.vidstream.get(cv.CAP_PROP_POS_FRAMES)
         #GlProp.output = open(logfile,'wb')
         GlProp.trackingON = True
         tObjList.clear() #prevents data from pre-track button hit to go in
@@ -229,7 +230,8 @@ class vFrame(wx.Frame):
                           "BackgroundUpdateAlpha":GlProp.alpha/1000.,
                           "NeighborDistance":GlProp.mDist,
                           "ImageProcessing":GlProp.TrckParameter}
-        writeMatlab(GlProp.trackData,trckParameters,self.dirname+'\\'+'mtD_'+os.path.splitext(GlProp.vidfile[GlProp.vidN])[0]+".mat")
+        #writeMatlab(GlProp.trackData,trckParameters,self.dirname+'\\'+'mtD_'+os.path.splitext(GlProp.vidfile[GlProp.vidN])[0]+".mat")
+        writeMatlab(GlProp.trackData,trckParameters,os.path.join(self.dirname,'mtD_',os.path.splitext(GlProp.vidfile[GlProp.vidN])[0],".mat"))
         print "done saving data for "+GlProp.vidfile[GlProp.vidN]
         #cPickle.dump(GlProp.trackData,GlProp.output,-1)
         #tObjList.clear()
@@ -261,7 +263,7 @@ class vFrame(wx.Frame):
         self.pRate.SetLabel("Process rate: %2.2f Hz" % processRate)
         #also set the frame slider if applicable
         if len(GlProp.vidfile) > 0:
-            self.seek_sld.SetValue(int(100.*GlProp.vidstream.get(cv.CV_CAP_PROP_POS_AVI_RATIO)))
+            self.seek_sld.SetValue(int(100.*GlProp.vidstream.get(cv.CAP_PROP_POS_AVI_RATIO)))
 
     def OnExit(self,e):
         cv.destroyAllWindows()
@@ -291,8 +293,8 @@ class vFrame(wx.Frame):
             GlProp.vidN = 0
             print "Video File: "+GlProp.vidfile[0]
             self.dirname = dlg.GetDirectory()
-            GlProp.vidstream=cv2.VideoCapture(self.dirname+'\\'+GlProp.vidfile[0])
-            GlProp.fIdx = GlProp.vidstream.get(cv.CV_CAP_PROP_POS_FRAMES)
+            GlProp.vidstream=cv2.VideoCapture(os.path.join(self.dirname,GlProp.vidfile[0]))
+            GlProp.fIdx = GlProp.vidstream.get(cv.CAP_PROP_POS_FRAMES)
             GlProp.fps = 1000.
             ret,frame1GS = GetGSFrame(GlProp.vidstream)
             #ret,frame1 = GlProp.vidstream.read()
@@ -313,8 +315,9 @@ class vFrame(wx.Frame):
             print "Batch Tracking Set for Directory: "+self.dirname
             GlProp.vidfile = [file for file in os.listdir(self.dirname) if file.endswith(".avi")]
             print '\n'.join(GlProp.vidfile)        
-            GlProp.vidstream=cv2.VideoCapture(self.dirname+'\\'+GlProp.vidfile[0])
-            GlProp.fIdx = GlProp.vidstream.get(cv.CV_CAP_PROP_POS_FRAMES)
+            #GlProp.vidstream=cv2.VideoCapture(self.dirname+'\\'+GlProp.vidfile[0])
+            GlProp.vidstream=cv2.VideoCapture(os.path.join(self.dirname,GlProp.vidfile[0]))
+            GlProp.fIdx = GlProp.vidstream.get(cv.CAP_PROP_POS_FRAMES)
             GlProp.fps = 1000.
             GlProp.vidN = 0
             ret,frame1GS = GetGSFrame(GlProp.vidstream)
@@ -328,7 +331,8 @@ class vFrame(wx.Frame):
 
     def getTrckVid_Name(self):
         """creates a filename based on current vidfile and vidn"""
-        return  self.dirname+'\\'+GlProp.vidfile[GlProp.vidN][:-4]+"_trOut.avi"
+        #return  self.dirname+'\\'+GlProp.vidfile[GlProp.vidN][:-4]+"_trOut.avi"
+        return  os.path.join(self.dirname,GlProp.vidfile[GlProp.vidN][:-4],"_trOut.avi")
 
     def trVid_CB(self,e):
         """initializes the global video writer when checked and deletes it when unchecked"""
@@ -361,7 +365,7 @@ class cvWindowCheckBox(wx.CheckBox):
             cv2.namedWindow(chLabel)
             #cv2.imshow(chLabel,cFrame[:,:,GlProp.cvFrame[chLabel]])
         else:
-            cv.DestroyWindow(chLabel)
+            cv.destroyWindow(chLabel)
 
 def make_trckCB(parent,ParameterName):
     """returns a sizer object with a track parameter checkbox and a choice array with 1 or 2 iterations"""
