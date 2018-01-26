@@ -12,4 +12,4 @@ scipi
 
 
 to use:
-run on larvalMultitrack_main.py with Python2. A demonstration video is included nder demo_data
+run on larvalMultitrack_main.py with Python2. A demonstration video is included under demo_data

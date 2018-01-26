@@ -24,7 +24,8 @@ class vFrame(wx.Frame):
         tObjList={} #ObjDictionary has {ObjID: tracked Obj} structure
         ############################################
 
-        wx.Frame.__init__(self, parent, title=title, size=(1000,500))
+        #wx.Frame.__init__(self, parent, title=title, size=(1000,500))
+        wx.Frame.__init__(self, parent, title=title, size=wx.DefaultSize)
         self.Panel = wx.Panel(self,-1,size=(1000,500))
         #self.bmp = wx.BitmapFromBuffer(img.shape[1],img.shape[0],img)
         #sbmp=wx.StaticBitmap(self,-1,bitmap=self.bmp)
