@@ -1,0 +1,5 @@
+install K-Lite MEGA codec pack to allow the program to load most video files.
+
+the xvid-MPEG4 codec is required to generate validation videos.
+
+on compressed .avi files, lmultitrack runs well in the fwd, but not reverse direction. both work on uncompressed .avi. 

@@ -1,0 +1,41 @@
+%please report any bugs/feature requests here. 
+
+
+BUGS
+10/20/2013 
+After video finishes tracking, as it saves the following error appears (tracker continues but error appears for each save attempt):
+
+"Tracking lAcquisition001.avi ...
+  File "LarvalMultitrack\build\pyi.win32\LarvalMultitrack\out00-PYZ.pyz\wxGUI_Classes", line 169, in onNextFrame
+  File "LarvalMultitrack\build\pyi.win32\LarvalMultitrack\out00-PYZ.pyz\lm_functions", line 87, in updateTracking
+  File "LarvalMultitrack\build\pyi.win32\LarvalMultitrack\out00-PYZ.pyz\lm_functions", line 94, in updateTrackData
+
+<type 'exceptions.IndexError'>: index 9000 is out of bounds for axis 0 with size 9000
+Saving 566 objects...
+done saving data for lAcquisition001.avi
+Tracking lAcquisition002.avi ..."
+
+
+
+On saving, LM says that index 9000 is not available.
+
+-After Tracking several videos, Tracking stops and the following error appears:
+Tracking lAcquisition075.avi ...
+  File "LarvalMultitrack\build\pyi.win32\LarvalMultitrack\out00-PYZ.pyz\wxGUI_Classes", line 157, in onNextFrame
+  File "LarvalMultitrack\build\pyi.win32\LarvalMultitrack\out00-PYZ.pyz\wxGUI_Classes", line 186, in stopTracking
+  File "LarvalMultitrack\build\pyi.win32\LarvalMultitrack\out00-PYZ.pyz\lMulti_IO", line 26, in writeMatlab
+  File "LarvalMultitrack\build\pyi.win32\LarvalMultitrack\out00-PYZ.pyz\scipy.io.matlab.mio", line 269, in savemat
+  File "LarvalMultitrack\build\pyi.win32\LarvalMultitrack\out00-PYZ.pyz\scipy.io.matlab.mio5", line 841, in put_variables
+  File "LarvalMultitrack\build\pyi.win32\LarvalMultitrack\out00-PYZ.pyz\scipy.io.matlab.mio5", line 592, in write_top
+  File "LarvalMultitrack\build\pyi.win32\LarvalMultitrack\out00-PYZ.pyz\scipy.io.matlab.mio5", line 629, in write
+  File "LarvalMultitrack\build\pyi.win32\LarvalMultitrack\out00-PYZ.pyz\scipy.io.matlab.mio5", line 651, in write_numeric
+  File "LarvalMultitrack\build\pyi.win32\LarvalMultitrack\out00-PYZ.pyz\scipy.io.matlab.mio5", line 502, in write_element
+  File "LarvalMultitrack\build\pyi.win32\LarvalMultitrack\out00-PYZ.pyz\scipy.io.matlab.mio5", line 518, in write_regular_element
+  File "LarvalMultitrack\build\pyi.win32\LarvalMultitrack\out00-PYZ.pyz\scipy.io.matlab.mio5", line 489, in write_bytes
+
+<type 'exceptions.MemoryError'>:
+FIXED!
+
+FEATURES
+TRACK SEEK
+DONE
