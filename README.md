@@ -1,4 +1,4 @@
-# larvaMultitrack
+# larvalMultitrack
 ![alt text](https://github.com/dawnis/larvalMultitrack/blob/master/Screenshots/lmultitrack_scrrenshot.png)
 
 # A video object tracker for monitoring the behavior of larval zebrafish
